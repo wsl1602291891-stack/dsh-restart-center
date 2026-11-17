@@ -1,0 +1,41 @@
+{
+  "name": "dsh-restart-center",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "Restart control for the Desktop window chrome, sitting beside the built-in Application/Edit menus: two confirm dialogs, a session-running warning, and an install/queue notice that stops you from restarting in the middle of a plugin installation.",
+  "meta": {
+    "title": "重启中心",
+    "description": "标题栏「应用 / 编辑」同级放一个重启按钮：二次确认弹窗，有会话在跑会警告，有插件在装或排队会提示；确认后重启整个桌面应用。"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "engines": {
+    "node": ">=20.18.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}

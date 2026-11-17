@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Restart Center",
+    "description": "A restart control beside the window chrome's Application/Edit menus: a two-step confirmation, a warning when sessions are running, and a notice when a plugin install is running or queued. Confirming restarts the whole desktop app."
+  }
+}

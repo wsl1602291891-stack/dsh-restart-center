@@ -1,0 +1,7 @@
+# Restart control for the Desktop window chrome. The Host row owns the loopback
+# status/restart endpoints and watches plugin-manager install events; the Client
+# half draws the control in shell.overlay beside Application/Edit.
+- insert:
+    - id: dsh-restart-center
+      name: dsh-restart-center
+      config: {}
